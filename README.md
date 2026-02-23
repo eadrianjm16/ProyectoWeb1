@@ -20,7 +20,7 @@ Para poder ver la web da clic aqui:
 * **CSS3:** Flexbox, Grid, Animaciones, Keyframes, @Mediaquery.
 * **Formularios:** Validación nativa.
 
-##🧱 Estructura
+## 🧱 Estructura
 * `Index.html`: Portada con el slider con datos de PS5.
 * `Consolas.html`: Versiones de consolas PS5.
 * `Juegos.html`: Juegos emblemáticos de PS5.
@@ -28,7 +28,11 @@ Para poder ver la web da clic aqui:
 * `Explora.html` / `Historia.html` / etc: Datos variados (historia, comunidad, servivios, tienda, soporte).
 * `Plus.html`: Suscripciones de PlayStation.
 * `contacto.html`: Formulario de consulta.
+* `aviso-legal.html`: Avisos legales.
+* `privacidad.html`: Privaciadad de la página.
 * `assets/style.css`: Todo el estilo en un único archivo organizado y comentado.
+* `FUENTES.txt`: Fuentes enlazadas dentro del proyecto web.
+
 
 
 Este es un proyecto en colaboracion con [Jesus Vargas - Github: JesusV6545]
