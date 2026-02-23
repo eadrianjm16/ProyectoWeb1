@@ -191,18 +191,15 @@ main p{
 
   /* ======= SLIDER CONTINUO ====== */
   .slider1{
-    height:380px;
+    position: relative;
     width:100%;
-  }
-  .slider-ventana{
-    height:100%;
     overflow:hidden;
     border-radius: 12px;
   }
+  
   .slider2{
     display:flex;
     height:100%;
-    will-change:transform;
     width: 1000%;             /* 10 imagenes x 100% del tamaño = 1000% */
     animation: animaSlider 22s ease-in-out infinite;
   }
@@ -212,23 +209,22 @@ main p{
   }
   .slide{             /* Cada slide ocupa 1/10 del ancho total */
     width: 10%;       /*10 slides = 10% cada una */
-    height:100%;
+    position: relative;
     display:flex;
-    align-items:stretch;
   }
   .slide-imagen{
-    flex:100% 0 50%;
-    height:100%;
+    width: 50%;
   }
   .slide-imagen img{
     width:100%;
     height:100%;
     object-fit:cover;
-    min-height: 380px;      /* igual que el slider */
+    object-position: center;
+    min-height: 400px;      /* igual que el slider */
   }
   .slide-texto{
-    flex:0 0 50%;
-    padding:16px 20px;
+    width: 50%;
+    padding:32px;
     background:#0b1120;
     color:#fff;
     display:flex;
@@ -621,18 +617,18 @@ main p{
   
 
   /* Slider: en móvil la imagen se coloca arriba y el texto debajo. */
-  .slider1{
-    height:260px;
-  }
   .slide{
     flex-direction:column;
   }
-  .slide-imagen{
-    flex:0 0 55%;
+  .slide-imagen, .slide-texto {
+      width: 100%;              
   }
-  .slide-texto{
-    flex:1;
-    padding:12px 14px;
+  .slide-imagen img {
+      height: 250px;            
+  }
+  .slide-texto {
+      padding: 24px;
+      text-align: center;
   }
   
 
