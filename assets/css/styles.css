@@ -1,44 +1,45 @@
 /* ===================== ESTILOS BÁSICOS ===================== */
-*{                                    /* selector universal: aplica a todos los elementos */
+*{                                  
   box-sizing:border-box;               /* el ancho incluye padding y borde, evita desbordes */
 }
 body{
   margin:0;                            /* quita el margen por defecto del cuerpo */
-  font-family:Poppins, Arial, sans-serif;  /* tipo de letra principal y alternativas */
-  color:#0e1320;                       /* color del texto (azul muy oscuro) */
-  background:#fff;                     /* fondo blanco de la página */
+  font-family:Poppins, Arial, sans-serif;  
+  color:#0e1320;                       
+  background:#fff;                     
 }
 a{
-  color:inherit;                       /* los enlaces heredan el color del padre */
+  color:inherit;                       /* los enlaces heredan el color de la clase contenedora*/
   text-decoration:none;                /* quita el subrayado de los enlaces */
 }
 img{
-  display:block;                       /* las imágenes se comportan como bloque (no inline) */
-  max-width:100%;                      /* no superan el ancho del contenedor, son responsivas */
+  display:block;                       /* las imágenes se comportan como bloque uno debajo del otro*/
+  max-width:100%;                      
 }
 main h1{
-  font-size:32px;                      /* tamaño del título principal */
-  margin-top:0;                        /* sin margen arriba */
-  margin-bottom:16px;                  /* espacio debajo del título */
+  font-size:32px;                      
+  margin-top:0;                        
+  margin-bottom:16px;                  
 }
 main h2{
-  font-size:24px;                      /* tamaño de subtítulos nivel 2 */
-  margin-top:24px;                     /* espacio arriba */
-  margin-bottom:8px;                  /* espacio abajo */
+  font-size:24px;                      
+  margin-top:24px;                   
+  margin-bottom:8px;                 
 }
 main h3{
-  font-size:18px;                      /* tamaño de subtítulos nivel 3 */
-  margin-top:18px;                     /* espacio arriba */
-  margin-bottom:6px;                  /* espacio abajo */
+  font-size:18px;                      
+  margin-top:18px;                    
+  margin-bottom:6px;                 
 }
 main p{
-  line-height:1.6;                     /* altura de línea (legibilidad) */
-  color:#1f2933;                       /* color del texto de párrafos */
+  line-height:1.6;                     
+  color:#1f2933;                      
 }
+
 
 /* ======= ANIMACIONES EXTRA (no slider) ======= */
 /* Aparición suave del bloque principal de historia. */
-@keyframes animAparecer{               /* define una animación llamada animAparecer */
+@keyframes animAparecer{               
   from{                                /* estado inicial */
     opacity:0;                          /* invisible al inicio */
     transform:translateY(14px)           /* empieza 14px más abajo */
@@ -49,82 +50,84 @@ main p{
   }
 }
 
-/* Efecto de “subir” las tarjetas. */
-@keyframes animSubirTarjeta{           /* animación para tarjetas que suben */
+@keyframes animSubirTarjeta{           
   from{
-    opacity:0;                          /* invisible */
-    transform:translateY(18px);         /* 18px más abajo */
+    opacity:0;                          
+    transform:translateY(18px);         
   }
   to{
-    opacity:1;                          /* visible */
-    transform:translateY(0);           /* posición final */
+    opacity:1;                          
+    transform:translateY(0);           
   }
 }
-/* Movimiento de clase gridI. */
+
 @keyframes slideIzquierda {            /* animación: entra desde la izquierda */
   from { opacity: 0; transform: translateX(-70px); }  /* empieza invisible y 70px a la izq */
   to   { opacity: 1; transform: translateX(0); }        /* termina visible en su sitio */
 }
-/* Movimiento de clase gridD. */
+
 @keyframes slideDerecha {               /* animación: entra desde la derecha */
   from { opacity: 0; transform: translateX(70px); }   /* empieza 70px a la derecha */
   to   { opacity: 1; transform: translateX(0); }       /* termina en su posición */
 }
-/* Movimiento de clase oferta. */
+
 @keyframes anuncio{                    /* animación del texto que se desplaza (barra ofertas) */
   from{transform:translateX(0)}        /* empieza en su posición */
   to{transform:translateX(-100%)}      /* se mueve a la izquierda su propio ancho */
 }
+
 /* Movimiento de Slider. */
-@keyframes animaSlider{                 /* animación del carrusel: avanza de slide en slide */
-  0%,    8%  { transform: translateX(0); }      /* slide 1 visible */
-  10%,  18%  { transform: translateX(-10%); }   /* slide 2 */
-  20%,  28%  { transform: translateX(-20%); }    /* slide 3 */
-  30%,  38%  { transform: translateX(-30%); }   /* slide 4 */
-  40%,  48%  { transform: translateX(-40%); }   /* slide 5 */
-  50%,  58%  { transform: translateX(-50%); }   /* slide 6 */
-  60%,  68%  { transform: translateX(-60%); }   /* slide 7 */
-  70%,  78%  { transform: translateX(-70%); }   /* slide 8 */
-  80%,  88%  { transform: translateX(-80%); }   /* slide 9 */
-  90%, 100%  { transform: translateX(-90%); }   /* slide 10 */
+/* Los porcentajes matienen quieta la foto (por ejemplo:0% al 8%)*/
+/*El ultimo porcentaje -10,-20 etc, es la siguiente foto que del 1000% van restandole 10%*/            
+@keyframes animaSlider{                 
+  0%,    8%  { transform: translateX(0); } 
+  10%,  18%  { transform: translateX(-10%); }   
+  20%,  28%  { transform: translateX(-20%); }   
+  30%,  38%  { transform: translateX(-30%); }   
+  40%,  48%  { transform: translateX(-40%); }   
+  50%,  58%  { transform: translateX(-50%); }   
+  60%,  68%  { transform: translateX(-60%); }   
+  70%,  78%  { transform: translateX(-70%); }  
+  80%,  88%  { transform: translateX(-80%); }   
+  90%, 100%  { transform: translateX(-90%); }   
 }
 
 
 /* ==================== MEDIA QUERY 1: PANTALLA HASTA 3500px ===================*/
-@media (max-width:3500px){              /* estos estilos se aplican en pantallas de hasta 3500px de ancho */
+@media (max-width:3500px){              
 
-  /* ==== BARRA DE ARRIBA (anuncio simple) ==== */
+  /* ==== BARRA DE ARRIBA ==== */
   .barra-arriba{
     background:linear-gradient(90deg,#0E7CFB,#00439C);  /* degradado azul de izquierda a derecha */
-    color:#fff;                         /* texto blanco */
-    font-size:14px;                     /* tamaño de fuente */
+    color:#fff;                         
+    font-size:14px;                     
     overflow:hidden;                    /* oculta lo que se salga del contenedor */
     white-space:nowrap;                 /* el texto no salta de línea */
   }
-  .barra-arriba .oferta{                /* el texto que se desplaza dentro de la barra */
-    display:inline-block;               /* se comporta como bloque pero en línea */
-    padding-left:100%;                  /* empieza fuera a la derecha (para la animación) */
-    animation:anuncio 20s linear infinite;  /* usa la animación anuncio, 20s, repetida */
+  .barra-arriba .oferta{                
+    display:inline-block;               /* se comporta como bloque pero en horizontal a diferencia del "block" que lo hace vertical*/
+    padding-left:100%;                  /* empieza fuera desde afuera a la derecha para la animacion del anuncio */
+    animation:anuncio 20s linear infinite;  /* usa la animacion anuncio, 20s, repetida */
   }
 
   /* ======= CABECERA ======= */
   .header1{
-    position:sticky;                    /* la cabecera se queda fija al hacer scroll */
-    top:0;                              /* pegada arriba */
-    background:#fff;                    /* fondo blanco */
+    position:sticky;                   /* la cabecera se queda fija al hacer scroll */
+    top:0;                             /* pegada arriba */
+    background:#fff;                    
     border-bottom:1px solid #e8ecf5;   /* línea gris clara debajo */
-    z-index:10;                         /* por encima de otros elementos */
+    z-index:10;                        /* por encima de otros elementos */
   }
-  .header1 .barra-menu{                 /* contenedor interno del header */
-    max-width:1200px;                   /* ancho máximo para no estirar en pantallas grandes */
+  .header1 .barra-menu{                /* contenedor interno del header */
+    max-width:1200px;                  /* ancho máximo para no estirar en pantallas grandes */
     margin:0 auto;                     /* centrado horizontal */
     padding:12px 16px;                 /* espacio interno */
-    display:flex;                      /* flexbox para alinear logo y menú */
-    align-items:center;                /* centra verticalmente los hijos */
-    justify-content:space-between;     /* logo a la izq, menú a la der */
+    display:flex;                      
+    align-items:center;                /* centra verticalmente */
+    justify-content:space-between;     /* logo a la izquierda, menú a la derecha */
   }
   .logo{
-    display:flex;                      /* flex para logo + texto */
+    display:flex;                      
     align-items:center;                /* alineación vertical */
     gap:10px;                          /* espacio entre imagen y texto */
     font-weight:700;                   /* texto en negrita */
@@ -132,19 +135,19 @@ main p{
   }
   .logo img{
     width:56px;                        /* ancho fijo del logo */
-    height:36px;                      /* alto fijo */
-    border-radius:8px;                /* esquinas redondeadas */
+    height:36px;                       /* alto fijo */
+    border-radius:8px;                 /* esquinas redondeadas */
   }
 
   /* ==== MENU DESPLEGABLE ==== */
-  .menu-desplegable-input, .menu-desplegable-label{  /* en escritorio no se ve el menú hamburguesa */
-    display: none;                     /* oculta checkbox y botón hamburguesa */
+  .menu-desplegable-input, .menu-desplegable-label{  /* en escritorio no se ve el menú desplegable */
+    display: none;                     /* oculta checkbox y botón */
   }
 
   /* ==== MENÚ ==== */
   .menu{
     list-style:none;                   /* quita las viñetas de la lista */
-    display:flex;                      /* los ítems en fila */
+    display:flex;                     
     flex-wrap: wrap;                   /* si no caben, pasan a la siguiente línea */
     gap:16px;                          /* espacio entre ítems */
     margin:0;                          /* sin margen */
@@ -156,7 +159,7 @@ main p{
   .menu  li  a{
     display:block;                     /* el enlace ocupa todo el espacio del ítem */
     padding:8px;                       /* espacio interno */
-    border-radius:8px;                /* esquinas redondeadas */
+    border-radius:8px;                 
   }
   .menu  li  a:hover{
     color:#00439C;                     /* color azul al pasar el ratón */
@@ -166,32 +169,33 @@ main p{
   .submenu ul{
     display:none;                      /* submenú oculto por defecto */
     position:absolute;                 /* se posiciona respecto al ítem del menú */
-    top:100%;left:0;                   /* justo debajo del ítem, alineado a la izq */
-    background:#fff;                   /* fondo blanco */
-    border:1px solid #e8ecf5;         /* borde gris claro */
-    border-radius:10px;               /* esquinas redondeadas */
-    min-width:200px;                   /* ancho mínimo */
+    top:100%;                          /* justo debajo del ítem*/
+    left:0;                            /* alineado a la izq */
+    background:#fff;                   
+    border:1px solid #e8ecf5;          
+    border-radius:10px;                
+    min-width:200px;                   
     box-shadow:0 10px 30px rgba(0,0,0,.08);  /* sombra suave */
-    padding:6px;                      /* espacio interno */
+    padding:6px;                      
     list-style:none;                   /* sin viñetas */
     margin:0;                          /* sin margen */
   }
-  .submenu:hover ul, .submenu:focus-within ul{  /* al pasar el ratón o al tener foco, se muestra */
+  .submenu:hover ul, .submenu:focus-within ul{  /* al pasar el ratón, se muestra */
     display:block;                     /* hace visible el submenú */
   }
   .submenu ul a{
-    display:block;                     /* cada enlace ocupa toda la línea */
-    padding:10px;                      /* espacio interno */
-    border-radius:8px;                 /* esquinas redondeadas */
+    display:block;                     /*hace que cada enlace ocupe toda la línea */
+    padding:10px;                      
+    border-radius:8px;                 
   }
-  .submenu ul a:hover{
-    background:#f6f9ff;               /* fondo azul muy claro al hover */
-    color:#00439C;                     /* texto azul */
+  .submenu ul a:hover{                  /*hace que el el fondo se pinte al pasar el raton*/
+    background:#f6f9ff;              
+    color:#00439C;                     
   }
 
   /* ======= SLIDER CONTINUO ====== */
   .slider1{
-    position: relative;               /* para posicionar elementos hijos si hace falta */
+    position: relative;              
     width:100%;                       /* ocupa todo el ancho del contenedor */
     overflow:hidden;                  /* oculta las diapositivas que salen del borde */
     border-radius: 12px;              /* esquinas redondeadas */
@@ -199,7 +203,7 @@ main p{
   
   .slider2{
     display:flex;                     /* las diapositivas en fila horizontal */
-    height:100%;                     /* ocupa todo el alto del slider1 */
+    height:100%;                      /* ocupa todo el alto del slider1 */
     width: 1000%;                     /* 10 slides × 100% = 1000% para que quepan 10 */
     animation: animaSlider 22s ease-in-out infinite;  /* animación continua, 22 segundos */
   }
@@ -208,38 +212,38 @@ main p{
     animation-play-state: paused;     /* al pasar el ratón la animación se pausa */
   }
   .slide{
-    width: 10%;                       /* cada slide ocupa 1/10 del ancho (10% de 1000%) */
-    position: relative;               /* contexto de posicionamiento */
-    display:flex;                     /* imagen y texto en fila (escritorio) */
+    width: 10%;                       /* cada slide ocupa 10% del 1000% anterior */
+    position: relative;               
+    display:flex;                     
   }
   .slide-imagen{
     width: 50%;                       /* mitad del slide para la imagen */
   }
   .slide-imagen img{
     width:100%;                       /* imagen al 100% del ancho de su contenedor */
-    height:100%;                     /* ocupa todo el alto disponible */
+    height:100%;                      /* ocupa todo el alto disponible */
     object-fit:cover;                 /* recorta la imagen para llenar sin deformar */
-    object-position: center;         /* centra el recorte */
+    object-position: center;          /* centra el recorte */
     min-height: 400px;                /* altura mínima para que se vea bien */
   }
   .slide-texto{
     width: 50%;                       /* mitad del slide para el texto */
     padding:32px;                     /* espacio interno del bloque de texto */
-    background:#0b1120;              /* fondo azul muy oscuro (casi negro) */
-    color:#fff;                      /* texto blanco */
-    display:flex;                    /* flex para centrar el contenido */
-    flex-direction:column;           /* título y párrafo en columna */
-    justify-content:center;           /* centrado vertical */
+    background:#0b1120;              
+    color:#fff;                      
+    display:flex;                    
+    flex-direction:column;           
+    justify-content:center;           
   }
   .slide-texto h3{
-    margin:0 0 6px;                  /* sin margen arriba, 6px abajo */
+    margin:0 0 6px;                  /* sin margen arriba,izquierdo/derecho,  6px abajo */
     font-size:18px;                  /* tamaño del título del slide */
   }
   .slide-texto p{
-    margin:0;                         /* sin margen */
-    font-size:14px;                  /* tamaño del párrafo */
+    margin:0;                        
+    font-size:14px;                  
     line-height:1.5;                 /* espacio entre líneas */
-    color: #cfd6e6;                  /* gris claro para el texto */
+    color: #cfd6e6;                  
   }
 
   /* ======= SECCIONES - MAINS ======= */
@@ -654,6 +658,7 @@ main p{
     grid-column:span 6;                 /* cada columna (en contexto grid) */
   }
 }
+
 
 
 
