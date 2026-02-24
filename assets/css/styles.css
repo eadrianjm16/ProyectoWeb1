@@ -596,10 +596,10 @@ main p{
     width: 100%;                        /* ancho completo */
     min-width: 0;                       /* permite que se ajuste */
     margin: 0 0 8px 0;                  /* margen abajo */
-    padding: 8px 0 8px 12px;           /* espacio interno, sangría izq */
-    background: #f6f9ff;                /* fondo azul muy claro */
-    border: 1px solid #e8ecf5;          /* borde gris */
-    border-radius: 10px;                /* esquinas redondeadas */
+    padding: 8px 0 8px 12px;            /* espacio interno, sangría izquierda */
+    background: #f6f9ff;                
+    border: 1px solid #e8ecf5;          
+    border-radius: 10px;                
     box-shadow: 0 4px 12px rgba(0,0,0,.06);  /* sombra suave */
     list-style: none;                   /* sin viñetas */
     border-left: 3px solid #00439C;     /* barra azul a la izquierda */
@@ -624,7 +624,7 @@ main p{
     flex-direction:column;              /* imagen arriba, bloque negro debajo */
   }
   .slide-imagen, .slide-texto {
-      width: 100%;                      /* ambos ocupan todo el ancho del slide */
+      width: 100%;                      /* ambos ocupan todo el ancho del slider */
   }
   .slide-imagen img {
       height: 250px;                    /* altura fija para todas las imágenes en móvil */
@@ -648,16 +648,17 @@ main p{
 
   
   .footer1 .contenedor{
-    display:flex;                       /* columnas del footer en flex */
-    justify-content:space-between;      /* repartidas */
-    flex-wrap:wrap;                     /* pueden pasar de línea */
+    display:flex;                       
+    justify-content:space-between;      /* reparte columnas a lo ancho del footer */
+    flex-wrap:wrap;                     /* pueden pasar de línea si no entra */
     gap:20px;                           /* espacio entre columnas */
     margin-bottom: 30px;                /* espacio debajo */
   }
   .footer1 .columna{
-    grid-column:span 6;                 /* cada columna (en contexto grid) */
+    grid-column:span 6;                 /* cada columna en el grid */
   }
 }
+
 
 
 
