@@ -195,7 +195,7 @@ main p{
 
   /* ======= SLIDER CONTINUO ====== */
   .slider1{
-    position: relative;              
+    position: relative;               /*para que quede un objeto al lado del otro*/
     width:100%;                       /* ocupa todo el ancho del contenedor */
     overflow:hidden;                  /* oculta las diapositivas que salen del borde */
     border-radius: 12px;              /* esquinas redondeadas */
@@ -286,7 +286,7 @@ main p{
   }
   .caja-grid p{
     margin:0;                         /* sin margen */
-    color:#475569;                    /* gris para el párrafo */
+    color:#475569;                    
   }
 
 
@@ -295,8 +295,8 @@ main p{
     margin-bottom:26px;                 /* espacio debajo del bloque */
     padding:18px;                       /* espacio interno */
     border-radius:12px;                /* esquinas redondeadas */
-    border:1px solid #e8ecf5;           /* borde gris claro */
-    background:#fbfcff;                 /* fondo blanco con un toque azul */
+    border:1px solid #e8ecf5;           
+    background:#fbfcff;                 
   }
   .bloque-texto ul{
     padding-left:20px;                  /* sangría de la lista */
@@ -333,7 +333,7 @@ main p{
   }
 
   .tarjeta-animacion{
-    /* Animación para que las tarjetas parezcan “subir” desde abajo de forma suave. */
+    /* Animación para que las tarjetas parezcan subir desde abajo de forma suave. */
     animation:animSubirTarjeta 1.2s ease-out both;  /* animación de subir al aparecer */
   }
   .mov-izquierda{
@@ -348,10 +348,10 @@ main p{
     border:1px solid rgb(199, 188, 188); /* borde gris */
     border-radius:12px;                 /* esquinas redondeadas */
     overflow:hidden;                     /* contenido no se sale */
-    background:#fff;                    /* fondo blanco */
+    background:#fff;                    
   }
   .caja-grid4 a img{
-    width:100%;                          /* imagen al 100% del ancho */
+    width:100%;                          
     max-height:450px;                    /* altura máxima */
     object-fit:contain;                  /* se ajusta sin recortar */
     border-radius:6px;                  /* esquinas redondeadas */
@@ -364,7 +364,7 @@ main p{
   }
   .caja-grid4 p{
     margin:0;                            /* sin margen */
-    color:#475569;                      /* color gris del párrafo */
+    color:#475569;                      
   }
   .hero-historia{
     padding:20px 18px;                   /* espacio interno */
@@ -375,11 +375,11 @@ main p{
     animation:animAparecer 1.2s ease-out both;  /* aparece suavemente al cargar */
   }
   .hero-historia p{
-    color:#e5edff;                      /* texto en azul muy claro */
+    color:#e5edff;                      
   }
   /* Arreglo de imagenes para ACCESORIOS */
   .caja-img {
-    display: flex;                       /* flexbox para alinear imágenes en fila */
+    display: flex;                       
     justify-content: space-around;       /* espacio repartido entre las imágenes */
   }
   .caja-img img{
@@ -393,10 +393,10 @@ main p{
 
   /* ======= FORMULARIO ======= */
   .form1{
-    max-width:820px;                    /* ancho máximo del formulario */
+    max-width:820px;                   /* ancho máximo del formulario */
     margin:0 auto;                     /* centrado */
-    background:#fff;                   /* fondo blanco */
-    border:1px solid #e8ecf5;           /* borde gris claro */
+    background:#fff;                   
+    border:1px solid #e8ecf5;           
     border-radius:12px;                /* esquinas redondeadas */
     padding:18px;                      /* espacio interno */
   }
@@ -417,7 +417,7 @@ main p{
   .form1 input[type=text], .form1 input[type=email], .form1 select, .form1 textarea{
     width:100%;                        /* los campos ocupan todo el ancho disponible */
     padding:10px 12px;                 /* espacio interno del campo */
-    border:1px solid #cfd6e6;          /* borde gris */
+    border:1px solid #cfd6e6;          
     border-radius:8px;                 /* esquinas redondeadas */
   }
   .form1 textarea{
@@ -429,72 +429,72 @@ main p{
     padding:0;                         /* sin relleno */
   }
   .botones{
-    display:flex;                     /* botones en fila */
+    display:flex;                     
     gap:10px;                         /* espacio entre botones */
     margin-top:12px;                  /* espacio arriba del grupo de botones */
   }
   .boton1{
-    height:40px;                      /* altura del botón principal */
+    height:40px;                       /* altura del botón principal */
     padding:0 16px;                    /* espacio horizontal interno */
     border-radius:8px;                 /* esquinas redondeadas */
     border:1px solid transparent;      /* borde invisible */
-    font-weight:700;cursor:pointer;     /* negrita y cursor de mano */
-    background:#00439C;                /* fondo azul */
-    color:#fff;                        /* texto blanco */
+    font-weight:700;cursor:pointer;    /* negrita y cursor de mano */
+    background:#00439C;                
+    color:#fff;                        
   }
   .boton2{
     height:40px;                      /* altura del botón secundario */
     padding:0 16px;                    /* espacio interno */
     border-radius:8px;                 /* esquinas redondeadas */
-    border:1px solid #cfd6e6;          /* borde gris */
-    background:#fff;                   /* fondo blanco */
+    border:1px solid #cfd6e6;          
+    background:#fff;                   
   }
 
   /* ======= PIE DE PÁGINA ======= */
   .footer1{
     border-top:1px solid #e8ecf5;     /* línea que separa el footer del contenido */
-    background:#fff;                   /* fondo blanco */
+    background:#fff;                   
     margin-top:32px;                   /* espacio arriba del footer */
   }
   .footer1 .contenedor{
-    display:flex;                      /* las columnas del footer en fila */
+    display:flex;                      
     justify-content:space-between;     /* espacio repartido entre columnas */
     flex-wrap:wrap;                    /* si no caben, pasan a la siguiente línea */
     gap:40px;                          /* espacio entre columnas */
-    margin-bottom:10px;                /* poco margen debajo */
+    margin-bottom:10px;                /* margen debajo */
   }
   .footer1 .columna{
-    grid-column:span 6;                /* (en contexto grid) cada columna ocupa 6 */
+    grid-column:span 6;                /* cada columna ocupa 6 espacios en el grid */
   }
   .footer1 h4{
     margin:0 0 8px;                    /* poco margen debajo del título de columna */
     font-size:14px;                    /* tamaño del título */
-    text-transform:uppercase;         /* título en mayúsculas */
-    letter-spacing:1px;               /* espacio entre letras */
+    text-transform:uppercase;          /* título en mayúsculas */
+    letter-spacing:1px;                /* espacio entre letras */
   }
   .footer1 .columna a{
     display:block;                     /* cada enlace en una línea */
     margin-bottom:6px;                 /* espacio entre enlaces */
   }
   .footer1 .legal{
-    grid-column:span 12;                /* texto legal ocupa todo el ancho */
+    grid-column:span 12;               /* texto legal ocupa todo el ancho */
     color:#64748b;                     /* gris para el texto legal */
     font-size:14px;                    /* tamaño */
     margin-bottom: 30px;               /* espacio debajo */
     text-align:center;                 /* centrado */
   }
   .piefinal{
-    display:flex;                      /* enlaces finales en fila */
+    display:flex;                      
     flex-wrap: wrap;                   /* pueden pasar de línea si no caben */
     justify-content:center;            /* centrados */
     gap:20px;                          /* espacio entre enlaces */
     margin-bottom: 30px;               /* espacio debajo */
   }
   .piefinal1{
-    font-size:14px;                    /* tamaño de los enlaces del pie */
+    font-size:14px;                    /* tamaño de los enlaces */
   }
   .piefinal1 a{
-    color:#64748b;                     /* gris por defecto */
+    color:#64748b;                     
   }
   .piefinal1 a:hover{
     color:#00439C;                     /* azul al pasar el ratón */
@@ -503,31 +503,31 @@ main p{
 }
 
 /* ======= MEDIA QUERY 2: PANTALLA HASTA 600px (modo móvil) =====================*/
-@media(max-width:600px){                /* estos estilos solo se aplican en pantallas de 600px o menos */
+@media(max-width:600px){                /
 
   .logo{
-    display: flex;                      /* logo en flex para alinear imagen y texto */
+    display: flex;                      
     flex-wrap: wrap;                    /* puede pasar de línea si no cabe */
   }
   .header1 .barra-menu{
     flex-direction: row;                /* logo y menú en fila horizontal */
     align-items: center;                /* centrados verticalmente */
-    justify-content: space-between;     /* logo a la izq, hamburguesa a la der */
+    justify-content: space-between;     /* logo a la izq, desplegable a la derecha */
     gap: 8px;                           /* espacio entre elementos */
   }
 
-  /* --- DESPLEGABLE PRINCIPAL: menú que se abre/cierra con el icono hamburguesa  --- */
+  /* --- DESPLEGABLE PRINCIPAL: menú que se abre/cierra con el icono de tres lineas  --- */
   .menu-desplegable-input {
-    position: absolute;                  /* lo sacamos del flujo para no ocupar sitio */
-    opacity: 0;                         /* invisible pero sigue en el DOM (para el :checked) */
+    position: absolute;                 /* lo sacamos para no ocupar sitio */
+    opacity: 0;                         /* invisible pero sigue allí */
     pointer-events: none;               /* no recibe clics; el label sí */
   }
   .menu-desplegable-input:checked ~ .menu {
     display: flex;                      /* cuando el checkbox está marcado, se muestra el menú */
   }
   .menu-desplegable-label {
-    display: flex;                      /* el botón hamburguesa es un flex */
-    flex-direction: column;              /* las tres barras en columna */
+    display: flex;                      /* el botón es un flex */
+    flex-direction: column;             /* las tres barras en columna */
     justify-content: center;            /* centrado vertical */
     gap: 5px;                           /* espacio entre las barras */
     width: 32px;                        /* ancho del botón */
@@ -536,19 +536,19 @@ main p{
     cursor: pointer;                    /* cursor de mano al pasar por encima */
     border-radius: 8px;                 /* esquinas redondeadas */
     border: 1px solid #e8ecf5;          /* borde gris claro */
-    background: #fff;                   /* fondo blanco */
+    background: #fff;                   
   }
   .menu-desplegable-label:hover {
-    background: #f6f9ff;                 /* fondo azul muy claro al hover */
+    background: #f6f9ff;                /* fondo azul muy claro al hover */
     border-color: #cfd6e6;              /* borde un poco más visible */
   }
   /* Las tres barras del icono. */
   .menu-desplegable-label span {
-    display: block;                      /* cada barra es un bloque */
+    display: block;                     /* cada barra es un bloque */
     width: 100%;                        /* ancho completo del botón */
     height: 3px;                        /* grosor de la barra */
     background: #00439C;                /* color azul */
-    border-radius: 2px;                  /* esquinas redondeadas */
+    border-radius: 2px;                 /* esquinas redondeadas */
     transition: transform 0.25s ease, opacity 0.25s ease;  /* animación al abrir/cerrar */
   }
   /* Animación al abrir: la barra de en medio se oculta, las otras forman una X. */
@@ -658,6 +658,7 @@ main p{
     grid-column:span 6;                 /* cada columna (en contexto grid) */
   }
 }
+
 
 
 
